@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,300&display=swap');
+
+:root{
+    --main-color: rgb(255, 51, 0);
+    --text-color: rgb(212, 164, 7);
+    --hover-color: rgb(232, 10, 10);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 1.04rem;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 2rem;
+}
+
+img{
+    width: 600px;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.heading h1{
+    margin-bottom: 1rem;
+}
+
+.search{
+    margin: 2rem 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+#content, .search-btn{
+    width: 100vh;
+}
+
+#content{
+    font-size: 1.03rem;
+    padding: 0 1rem;
+    outline: 0;
+    border: 1px solid orange;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+#content::placeholder{
+    color: var(--text-color);
+}
+
+.search-btn{
+    cursor: pointer;
+    width: 3rem;
+    height: 2.5rem;
+    font-size: 1.3rem;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transition: all 0.3s linear;
+}
+
+.search-btn:hover{
+    background-color: var(--hover-color);
+}
+
+.result-title{
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+}
+
+
+.meal-card{
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0px 8px 25px -12px rgba(0, 0, 0, 0.8);
+    margin: 1rem 0;
+}
+
+.meal-pic img{
+    width: 100%;
+    display: block;
+}
+
+.meal-name{
+    padding: 1rem 1rem;
+}
+
+.meal-name h3{
+    font-size: 1.5rem;
+}
+
+.get-reciepe{
+    margin-top: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    background: var(--main-color);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    display: block;
+    width: 8rem;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    transition: all 0.3s linear;
+}
+
+.get-reciepe:hover{
+    background: var(--hover-color);
+}
+
+.food-detail{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: rgb(248, 240, 4);
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+    overflow-y: scroll;
+    display: none;
+    padding: 2rem 0;
+}
+
+.food-detail::-webkit-scrollbar{
+    width: 0.5rem;
+}
+
+.food-detail::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 2rem;
+}
+
+.food-detail-content{
+    margin: 2rem;
+}
+
+#close-receipe-btn{
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 2rem;
+    opacity: 0.7;
+}
+
+.food-title{
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.category{
+    background: var(--main-color);
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.instructions{
+    padding: 2rem 0;
+}
+
+.food-detail-content p:not(.category){
+    padding: 1.5rem 0;
+}
+
+.food-img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+
+}
+
+.receipe-link{
+    margin: 1.5rem 0;
+    background: red;
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+
+.receipe-link a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+    transition: all 0.3s linear;
+}
+
+.receipe-link a:hover{
+    opacity: 0.8;
+}
+
+.sorryResponse{
+    font-family:'Times New Roman', Times, serif;
+    grid-template-columns: 1fr !important;
+    color: rgb(255, 47, 0);
+    font-weight: 600;
+    font-size: 2rem;
+    width: 100%;
+}
+
+/* for javascript */
+.showtheDetails{
+    display: block;
+}
+
+
+@media screen and (min-width: 600px){
+    .search{
+        width: 30rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+
+@media screen and (min-width: 700px){
+    #meal{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .meal-card{
+        margin: 0;
+    }
+    .food-detail{
+        width: 700px;
+    }
+    
+}
+
+@media screen and (min-width: 950px){
+    #meal{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
