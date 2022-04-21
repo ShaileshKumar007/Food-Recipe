@@ -87,9 +87,9 @@ function foodReciepe(food){
     food = food[0];
     let html = `
             <h2 class="food-title">${food.strMeal}</h2>
-            <p class="category">${food.strCategory}</p>
+            <p class="category">Category:  ${food.strCategory}</p>
             <div class="instructions">
-                <h3>instructions:</h3>
+                <h3>Instructions:</h3>
                 <p>${food.strInstructions}</p>
             </div>
             <div class="food-img">
